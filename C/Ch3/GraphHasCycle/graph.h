@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include "linkedList.h"
+/*
+ Undirected graph created using an adjacency list. No size specified which 
+ will allow the graph's vertex cardinality to fluxuate.
+ */
+typedef struct graph {
+	LinkedList **edges;
+	int length;
+} Graph;
+
+void addVertex (Graph *g, int vertex);
+void addEdge (Graph *g, int v1, int v2);
+LinkedList *getEdges (Graph *g, int vertex);
+LinkedList *hasCycle (Graph *g);
