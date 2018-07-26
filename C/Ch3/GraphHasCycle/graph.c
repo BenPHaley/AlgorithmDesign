@@ -1,19 +1,18 @@
 #include <stdio.h>
 #include "graph.h"
 
-
 /*
- 	After implementing more of the functions and analzing how my data structures 
- are structured, I would change the way I add vertices. I am letting the "user"
- choose a number for the vertex rather than assigning one. 
- 	If I, as the programmer, were to assign vertex numbers then I would be able
- to access the vertices like an array and index them. Currently I have to search for
- the vertex in the list every time. 
+ 	After implementing more of the functions and analzing how my data 
+ structures are structured, I would change the way I add vertices. I am 
+ letting the "user" choose a number for the vertex rather than assigning one. 
+ 	If I, as the programmer, were to assign vertex numbers then I would 
+ be able to access the vertices like an array and index them. Currently I 
+ have to search for the vertex in the list every time. 
 
-	Another solution to the problem is to have a hash table that maps the vertex
- number to the memory location where its LinkedList of edges are. This would take up 
- more memory than the previous solution but would allow the user to specify vertex
- numbers.  
+	Another solution to the problem is to have a hash table that maps 
+ the vertex number to the memory location where its LinkedList of edges are. 
+ This would take up more memory than the previous solution but would allow 
+ the user to specify vertex numbers.  
  */
 
 
@@ -25,7 +24,7 @@
 
  */
 void addVertex (Graph *g, int vertex) {
-	//allocate space for linkedlist pointer
+	//allocate space afor linkedlist pointer
 	(g->edges) = realloc(g->edges, sizeof(g->edges)+sizeof(LinkedList*));
 	//allocate space for linkedlist
 	((g->edges)[g->length]) = calloc(1, sizeof(LinkedList));
@@ -74,8 +73,8 @@ void addEdge (Graph *g, int v1, int v2) {
 }
 
 /*
- Finds the list of edges for the vertex specified and returns a pointer to the list. 
- The first node in the linked list is the number of the vertex. 
+ Finds the list of edges for the vertex specified and returns a pointer to 
+ the list. The first node in the linked list is the number of the vertex. 
  */
 LinkedList *getEdges (Graph *g, int vertex) {
 	int i = 0;
@@ -89,15 +88,45 @@ LinkedList *getEdges (Graph *g, int vertex) {
 }
 
 
+
 /*
- Searches the graph for a cycle. If the graph has a cycle the function returns a cycle
- in the graph. Otherwise return NULL. 
- This is done by performing a depth first search and comparing to the list of already
- processed vertices. 
+ Searches the graph for a cycle. If the graph has a cycle the function 
+ returns a cycle in the graph. Otherwise return NULL. 
+ This is done by performing a depth first search and comparing to the list 
+ of already processed vertices. 
  */
 LinkedList *hasCycle (Graph *g) {
 	int *seen = calloc(g->length, sizeof(int));
 	//will be used to recover cycle if found
-	int *pastPath = calloc(1, sizeof(int));
+	Stack pastP = {NULL, 0};
+	Stack pastPath = &pastP;
+	//easily determine if the vertex is in pastPath or not. Trade off of 
+	//memory space for running time
+	int *inPastPath = calloc(g->length, sizeof(int));
+	//assist in the order of processing vertices
+	Stack stack = {NULL, 0};
+	Stack *s = &stack;
+	Node *curr;
 
+	LinkedList *edges;
+	
+	int currVertex = 1;
+	pushStack(pastPath, 1);
+	// 1 signifies that the index+1 vertex is in pastPath
+	inPastPath[0] = 1;
+	while (currVertex != -1) {
+		if (inPastPath[currVertex-1]) {
+			//has a cycle and should return one
+		}
+		
+		//add the current element to past path
+		pushStack(pastPath, currVertex);
+		inPastPath[currVertex-1] = 1;
+		
+		//get edges and push them all to the stack, s
+		edges = getEdges(g, currVertex);
+
+		
+	}
+	
 }
