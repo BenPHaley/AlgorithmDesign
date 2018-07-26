@@ -1,5 +1,10 @@
+#ifndef GRAPHH
+
 #include <stdlib.h>
-#include "linkedList.h"
+#include "stack.h"
+
+#define GRAPHH
+
 /*
  Undirected graph created using an adjacency list. No size specified which 
  will allow the graph's vertex cardinality to fluxuate.
@@ -13,3 +18,6 @@ void addVertex (Graph *g, int vertex);
 void addEdge (Graph *g, int v1, int v2);
 LinkedList *getEdges (Graph *g, int vertex);
 LinkedList *hasCycle (Graph *g);
+
+
+#endif
