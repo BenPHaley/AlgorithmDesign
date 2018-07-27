@@ -1,14 +1,26 @@
 #include <stdlib.h>
 #include "linkedList.h"
 
+/* 
+ Adds a node to the end of the linked list with the parameter value.
+ */
 void push (LinkedList *list, int value) {
 	Node *curr = list->head;
 	Node *addition = calloc(1, sizeof(Node));
 	addition->value = value;
+	addition->next = NULL;
 	
+	// When there are no elements in the linked list
+	if (curr == NULL) {
+		curr = addition;
+		return;
+	}
+
+	// Finds the end of the linked list
 	while (curr->next != NULL) {
 		curr = curr->next;
 	}
+	// Adds node to the end of the linked list
 	curr->next = addition;
 }
 

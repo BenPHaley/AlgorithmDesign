@@ -16,8 +16,9 @@ typedef struct graph {
 
 void addVertex (Graph *g, int vertex);
 void addEdge (Graph *g, int v1, int v2);
+void removeEdge (Graph *g, int v1, int v2);
 LinkedList *getEdges (Graph *g, int vertex);
-LinkedList *hasCycle (Graph *g);
+Stack *hasCycle (Graph *g);
 
 
 #endif
