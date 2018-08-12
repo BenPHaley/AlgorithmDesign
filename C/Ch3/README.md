@@ -2,7 +2,7 @@
 
 
 #### ArrayStuff
-
+---
 
 Created an array and traversed through it. Printed out the array using a 
 function and passing in the array as a pointer. 
@@ -18,7 +18,7 @@ prototypes and macros.
 allows you to iterate over a 2D array with a single pointer. 
 
 #### BFSGraph
-
+---
 
 First created graph, queue, and node structs. I then wrote the function
 `int *bfs (Graph *g);`
@@ -32,7 +32,7 @@ graph
 argv
 
 #### GraphHasCycle
-
+---
 
 **_Chapter 3 Exercise 2_**
 
@@ -51,7 +51,7 @@ In the progress of finishing...
 - to allocate memory for a data structure to allow for a dynamic structure
 
 #### GraphTest
-
+---
 
 This was the first graph I coded in C. 
 
