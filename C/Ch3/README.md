@@ -1,6 +1,8 @@
 ## Chapter 3 (The Beginning)
 
+
 #### ArrayStuff
+
 
 Created an array and traversed through it. Printed out the array using a 
 function and passing in the array as a pointer. 
@@ -17,8 +19,9 @@ allows you to iterate over a 2D array with a single pointer.
 
 #### BFSGraph
 
+
 First created graph, queue, and node structs. I then wrote the function
-'''int *bfs (Graph *g);'''
+`int *bfs (Graph *g);`
 which returns an array of the vertices in the order they were visited. 
 
 **I learned:**
@@ -30,12 +33,13 @@ argv
 
 #### GraphHasCycle
 
-**Chapter 3 Exercise 2**
+
+**_Chapter 3 Exercise 2_**
 
 Give and algorithm to detext whether a given undirected graph contains 
 a cylce. If teh grpah contains a cycle, then your algorithms should output 
 one. (It should not output all cycles in the graph, just one of them). The 
-running time of your algorithm should be '''O(m+n)''' for a graph with n 
+running time of your algorithm should be `O(m+n)` for a graph with n 
 nodes and m edges.
 
 **Solution**
@@ -47,6 +51,7 @@ In the progress of finishing...
 - to allocate memory for a data structure to allow for a dynamic structure
 
 #### GraphTest
+
 
 This was the first graph I coded in C. 
 
