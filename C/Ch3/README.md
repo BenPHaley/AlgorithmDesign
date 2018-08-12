@@ -1,7 +1,7 @@
 ## Chapter 3 (The Beginning)
 
 
-#### ArrayStuff
+### ArrayStuff
 ---
 
 Created an array and traversed through it. Printed out the array using a 
@@ -17,7 +17,7 @@ prototypes and macros.
 - that the rows of 2D arrays are stored in adjacent memory locations. This 
 allows you to iterate over a 2D array with a single pointer. 
 
-#### BFSGraph
+### BFSGraph
 ---
 
 First created graph, queue, and node structs. I then wrote the function
@@ -31,7 +31,7 @@ graph
 - to read files using sscanf and use the main function parameters argc and 
 argv
 
-#### GraphHasCycle
+### GraphHasCycle
 ---
 
 **_Chapter 3 Exercise 2_**
@@ -50,7 +50,7 @@ In the progress of finishing...
 **I learned:**
 - to allocate memory for a data structure to allow for a dynamic structure
 
-#### GraphTest
+### GraphTest
 ---
 
 This was the first graph I coded in C. 
