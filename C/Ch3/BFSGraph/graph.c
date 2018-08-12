@@ -68,7 +68,8 @@ int *getEdges (Graph *g, int vertex) {
 }
 
 /*
-
+ Prints the input array to stdout. The first element in the array is the 
+ size of the array. 
  */
 void printfNeighbors (int *edges) {
 	int length = *edges;
