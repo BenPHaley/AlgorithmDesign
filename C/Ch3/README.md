@@ -1,6 +1,16 @@
 ## Chapter 3 (The Beginning)
 
 
+### GraphTest
+---
+
+This was the first graph I coded in C. 
+
+**I learned:**
+- a lot about how I can and cannot use pointers and arrays. Attempting to 
+create this graph led me to code *ArrayStuff* and some other practice programs
+
+
 ### ArrayStuff
 ---
 
@@ -31,10 +41,10 @@ graph
 - to read files using sscanf and use the main function parameters argc and 
 argv
 
-### GraphHasCycle
+### Exercise 2
 ---
 
-**_Chapter 3 Exercise 2_**
+**_GraphHasCycle_**
 
 Give and algorithm to detext whether a given undirected graph contains 
 a cylce. If teh grpah contains a cycle, then your algorithms should output 
@@ -42,20 +52,34 @@ one. (It should not output all cycles in the graph, just one of them). The
 running time of your algorithm should be `O(m+n)` for a graph with n 
 nodes and m edges.
 
-**Solution**
-
-Created a graph using an array of linked list pointers. Still in the process
-In the progress of finishing...
 
 **I learned:**
 - to allocate memory for a data structure to allow for a dynamic structure
 
-### GraphTest
+
+### Exercise 3
 ---
 
-This was the first graph I coded in C. 
+The algorithm described in Section 3.6 for computing a topological order-
+ing of a DAG repeatediy finds a node with no incoming edges and deletes
+it. This will eventually produce a topological ordering, provided that the 
+input graph really is a DAG.
 
-**I learned:**
-- a lot about how I can and cannot use pointers and arrays. Attempting to 
-create this graph led me to code *ArrayStuff* and some other practice programs
+
+But suppose that we’re given an arbitrary graph that may or may not
+be a DAG. Extend the topological ordering algorithm so that, given an
+input directed graph G, it outputs one of two things: (a) a topological
+ordering, thus establishing that a is a DAG; or (b) a cycle in G, thus
+establishing that a is not a DAG. The nmning time of your algorithm
+should be O(m + n) for a directed graph with n nodes and m edges.
+
+
+
+
+### Exercise 5
+---
+
+A binary tree is a rooted tree in which each node has at most two children.
+Show by induction that in any binary tree the number of nodes with two
+children is exactly one less than the number of leaves.
 
